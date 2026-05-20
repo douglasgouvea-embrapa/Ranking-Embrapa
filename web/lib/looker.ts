@@ -1,8 +1,15 @@
 import { unstable_cache } from 'next/cache';
 import lookerQuery from './looker-query.json';
+import { LOOKER_NAME_CORRECTIONS } from './name-corrections';
+import { normalizeName } from './normalize';
 import type { ConvocadoRecord } from './types';
 
 export const CONVOCADOS_CACHE_TAG = 'convocados';
+
+// Index de correções: key = "opcao|normalizedNomeErrado" → nomeCerto
+const CORRECTIONS_INDEX = new Map(
+  LOOKER_NAME_CORRECTIONS.map(c => [`${c.opcao}|${normalizeName(c.nomeErrado)}`, c.nomeCerto]),
+);
 
 const LOOKER_ENDPOINT = 'https://datastudio.google.com/batchedDataV2?appVersion=20260508_0101';
 const REPORT_URL = 'https://datastudio.google.com/reporting/081070ee-89c7-4e57-85bc-04d4601aa513/page/qD6ZF';
@@ -83,11 +90,15 @@ export async function fetchConvocadosFromLooker(): Promise<{
 
   const convocados: ConvocadoRecord[] = [];
   for (let i = 0; i < rows; i++) {
-    const nome = nomeCol[i];
-    if (!nome) continue;
+    const nomeRaw = nomeCol[i];
+    if (!nomeRaw) continue;
+    const opcao = opcaoCol[i] ?? undefined;
+    // Aplica correção de typo se houver entrada para esta opção + nome errado.
+    const correctionKey = opcao ? `${opcao}|${normalizeName(nomeRaw)}` : '';
+    const nome = CORRECTIONS_INDEX.get(correctionKey) ?? nomeRaw;
     convocados.push({
       nome,
-      opcao: opcaoCol[i] ?? undefined,
+      opcao,
       colocacao: colocacaoCol[i] ?? undefined,
       status: (statusCol[i] ?? undefined) as ConvocadoRecord['status'],
       unidade: unidadeCol[i] ?? undefined,
