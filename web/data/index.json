@@ -1,0 +1,1522 @@
+{
+  "pesquisador": [
+    {
+      "opcao": "40000968",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "CIÊNCIA DE ALIMENTOS",
+      "totalGeral": 23,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000775",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "CIÊNCIA DE ALIMENTOS DE ORIGEM ANIMAL",
+      "totalGeral": 16,
+      "totalPcd": 1,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001403",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "CIÊNCIA DE ALIMENTOS DE PÓS-COLHEITA",
+      "totalGeral": 21,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001791",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "ENOLOGIA",
+      "totalGeral": 13,
+      "totalPcd": 1,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40000134",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "TECNOLOGIA E INOVAÇÃO ALIMENTAR PARA GASTRONOMIA",
+      "totalGeral": 19,
+      "totalPcd": 1,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40001321",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "AGENTES BIOLÓGICOS DE CONTROLE",
+      "totalGeral": 23,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000457",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "AMBIÊNCIA E BIOCLIMATOLOGIA ANIMAL",
+      "totalGeral": 19,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40001894",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "APICULTURA E MELIPONICULTURA",
+      "totalGeral": 20,
+      "totalPcd": 3,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40002408",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "ARMAZENAMENTO DE GRÃOS E SEMENTES",
+      "totalGeral": 23,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000519",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "BACTERIOLOGIA VEGETAL",
+      "totalGeral": 14,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40002541",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "CIÊNCIA DO SOLO",
+      "totalGeral": 40,
+      "totalPcd": 4,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001144",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "CONTROLE ALTERNATIVO DE FITOPATÓGENOS",
+      "totalGeral": 19,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40001358",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "ECOLOGIA",
+      "totalGeral": 16,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000062",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "ENTOMOLOGIA AGRÍCOLA",
+      "totalGeral": 28,
+      "totalPcd": 3,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40002101",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "FERTILIDADE E QUÍMICA DO SOLO",
+      "totalGeral": 16,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000710",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "FISIOLOGIA DE PLANTAS CULTIVADAS",
+      "totalGeral": 24,
+      "totalPcd": 0,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40001565",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "FITOPATOLOGIA",
+      "totalGeral": 28,
+      "totalPcd": 1,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000632",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "FITOTECNIA",
+      "totalGeral": 22,
+      "totalPcd": 1,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40001592",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "FORRAGICULTURA",
+      "totalGeral": 24,
+      "totalPcd": 1,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40001479",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "MATOLOGIA",
+      "totalGeral": 21,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000268",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "MELHORAMENTO GENÉTICO ANIMAL",
+      "totalGeral": 19,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40003706",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "MELHORAMENTO GENÉTICO VEGETAL",
+      "totalGeral": 37,
+      "totalPcd": 2,
+      "totalPpp": 10
+    },
+    {
+      "opcao": "40001921",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "MICROBIOLOGIA E BIOQUÍMICA DO SOLO",
+      "totalGeral": 26,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000435",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "MODELAGEM E SIMULAÇÃO EM SISTEMAS AGRÍCOLAS",
+      "totalGeral": 15,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40001550",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "NEMATOLOGIA VEGETAL",
+      "totalGeral": 22,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40001484",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "NUTRIÇÃO DE RUMINANTES",
+      "totalGeral": 18,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40000735",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "PEDOLOGIA",
+      "totalGeral": 20,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001001",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SANIDADE AQUÍCOLA",
+      "totalGeral": 6,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40001472",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SANIDADE DE ABELHAS",
+      "totalGeral": 3,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40002503",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SANIDADE E DEFESA ANIMAL",
+      "totalGeral": 23,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001071",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SANIDADE E DEFESA VEGETAL",
+      "totalGeral": 9,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000894",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SERVIÇOS AMBIENTAIS",
+      "totalGeral": 18,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001834",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SILVICULTURA",
+      "totalGeral": 23,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001752",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO AGROECOLÓGICO E ORGÂNICO",
+      "totalGeral": 24,
+      "totalPcd": 1,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40001354",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO DE ESPÉCIES FRUTÍFERAS",
+      "totalGeral": 24,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000528",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO DE OLERÍCOLAS",
+      "totalGeral": 18,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000092",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO DE TUBEROSAS",
+      "totalGeral": 4,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40001084",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO INTEGRADO",
+      "totalGeral": 15,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001744",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO VEGETAL",
+      "totalGeral": 49,
+      "totalPcd": 5,
+      "totalPpp": 12
+    },
+    {
+      "opcao": "40000118",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS AGRÍCOLAS TRADICIONAIS (SATS)",
+      "totalGeral": 10,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000786",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE DADOS GEORREFERENCIADOS",
+      "totalGeral": 17,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000402",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO ANIMAL",
+      "totalGeral": 17,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001074",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO AQUÍCOLA",
+      "totalGeral": 19,
+      "totalPcd": 0,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000361",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO DE CAPRINOS E OVINOS",
+      "totalGeral": 16,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000709",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO DE CULTURAS ANUAIS",
+      "totalGeral": 25,
+      "totalPcd": 1,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40001350",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO DE CULTURAS PERENES",
+      "totalGeral": 6,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40000458",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO DE LEITE",
+      "totalGeral": 21,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40001749",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO DE RUMINANTES",
+      "totalGeral": 11,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000959",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SOCIOBIODIVERSIDADE",
+      "totalGeral": 11,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40001887",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "TECNOLOGIA E UTILIZAÇÃO DE PRODUTOS FLORESTAIS",
+      "totalGeral": 14,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40001860",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "USO SUSTENTÁVEL DE RECURSOS NATURAIS",
+      "totalGeral": 15,
+      "totalPcd": 3,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000058",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "VIROLOGIA VEGETAL",
+      "totalGeral": 11,
+      "totalPcd": 1,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40002003",
+      "area": "CIÊNCIAS AMBIENTAIS",
+      "subarea": "GESTÃO AMBIENTAL",
+      "totalGeral": 20,
+      "totalPcd": 3,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40000133",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "AGROSOCIOBIODIVERSIDADE E SEMENTES CRIOULAS",
+      "totalGeral": 21,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001690",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA AVANÇADA",
+      "totalGeral": 34,
+      "totalPcd": 8,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000345",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA SINTÉTICA E CIÊNCIAS ÔMICAS",
+      "totalGeral": 14,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40002684",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOPROCESSOS",
+      "totalGeral": 18,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40001045",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOPROSPECÇÃO E BIOTECNOLOGIA",
+      "totalGeral": 27,
+      "totalPcd": 1,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40000015",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "CONSERVAÇÃO DE RECURSOS GENÉTICOS VEGETAIS",
+      "totalGeral": 21,
+      "totalPcd": 1,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000119",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "ETNOBOTÂNICA",
+      "totalGeral": 21,
+      "totalPcd": 0,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40000502",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "FISIOLOGIA VEGETAL",
+      "totalGeral": 20,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001672",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "INSUMOS BIOLÓGICOS",
+      "totalGeral": 30,
+      "totalPcd": 4,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40001179",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "RECURSOS GENÉTICOS ANIMAIS",
+      "totalGeral": 15,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000131",
+      "area": "CIÊNCIAS DA SAÚDE",
+      "subarea": "NUTRIÇÃO",
+      "totalGeral": 15,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40002494",
+      "area": "CIÊNCIAS SOCIAIS APLICADAS",
+      "subarea": "CIÊNCIAS SOCIAIS APLICADAS À AGROPECUÁRIA",
+      "totalGeral": 23,
+      "totalPcd": 5,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40000115",
+      "area": "CIÊNCIAS SOCIAIS APLICADAS",
+      "subarea": "DESENVOLVIMENTO TERRITORIAL E TURISMO",
+      "totalGeral": 16,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000980",
+      "area": "ENGENHARIAS",
+      "subarea": "AUTOMAÇÃO E MECANIZAÇÃO",
+      "totalGeral": 25,
+      "totalPcd": 4,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40002098",
+      "area": "ENGENHARIAS",
+      "subarea": "RECURSOS FLORESTAIS E ENGENHARIA FLORESTAL",
+      "totalGeral": 14,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000404",
+      "area": "ENGENHARIAS",
+      "subarea": "ROBÓTICA E SENSORIAMENTO",
+      "totalGeral": 13,
+      "totalPcd": 1,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000405",
+      "area": "ESPECTROSCOPIA APLICADA",
+      "subarea": "INSTRUMENTAÇÃO EM RESSONÂNCIA MAGNÉTICA NUCLEAR",
+      "totalGeral": 14,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40004576",
+      "area": "FOTÔNICA",
+      "subarea": "INSTRUMENTAÇÃO EM FOTÔNICA",
+      "totalGeral": 13,
+      "totalPcd": 2,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40003965",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "ENGENHARIA DE DADOS",
+      "totalGeral": 7,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000065",
+      "area": "NANOTECNOLOGIA",
+      "subarea": "NANOTECNOLOGIA",
+      "totalGeral": 31,
+      "totalPcd": 1,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000271",
+      "area": "PRODUÇÃO AQUÍCOLA",
+      "subarea": "MANEJO E CONSERVAÇÃO DE RECURSOS PESQUEIROS",
+      "totalGeral": 16,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001494",
+      "area": "RECURSOS NATURAIS",
+      "subarea": "ECONOMIA AMBIENTAL",
+      "totalGeral": 17,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000338",
+      "area": "SUBÁREA: AGRICULTURA DIGITAL",
+      "subarea": "",
+      "totalGeral": 20,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000373",
+      "area": "SUBÁREA: AGRICULTURA E CLIMATOLOGIA",
+      "subarea": "",
+      "totalGeral": 26,
+      "totalPcd": 1,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000322",
+      "area": "SUBÁREA: BIOPROCESSOS PARA ENERGIAS RENOVÁVEIS",
+      "subarea": "",
+      "totalGeral": 14,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40002022",
+      "area": "SUBÁREA: CIÊNCIA DE DADOS",
+      "subarea": "",
+      "totalGeral": 18,
+      "totalPcd": 3,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000564",
+      "area": "SUBÁREA: CIÊNCIAS ECONÔMICAS APLICADAS À AGROPECUÁRIA",
+      "subarea": "",
+      "totalGeral": 9,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000224",
+      "area": "SUBÁREA: ENERGIAS RENOVÁVEIS",
+      "subarea": "",
+      "totalGeral": 15,
+      "totalPcd": 1,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000175",
+      "area": "SUBÁREA: ENGENHARIA DE PROCESSOS QUÍMICOS",
+      "subarea": "",
+      "totalGeral": 14,
+      "totalPcd": 1,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000043",
+      "area": "SUBÁREA: GEOPROCESSAMENTO",
+      "subarea": "",
+      "totalGeral": 18,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40001733",
+      "area": "SUBÁREA: GEOTECNOLOGIA",
+      "subarea": "",
+      "totalGeral": 12,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000339",
+      "area": "SUBÁREA: IMPACTOS AMBIENTAIS",
+      "subarea": "",
+      "totalGeral": 17,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40006431",
+      "area": "SUBÁREA: INOVAÇÃO SOCIAL",
+      "subarea": "",
+      "totalGeral": 15,
+      "totalPcd": 0,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000346",
+      "area": "SUBÁREA: QUÍMICA DE PRODUTOS NATURAIS",
+      "subarea": "",
+      "totalGeral": 16,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40005782",
+      "area": "SUBÁREA: RASTREABILIDADE E CERTIFICAÇÃO DIGITAL",
+      "subarea": "",
+      "totalGeral": 6,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000113",
+      "area": "SUBÁREA: SISTEMAS DE INFORMAÇÃO GEOGRÁFICA (SIG) E DESENVOLVIMENTO TERRITORIAL",
+      "subarea": "",
+      "totalGeral": 18,
+      "totalPcd": 1,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000116",
+      "area": "SUBÁREA: SOCIOLOGIA E ANTROPOLOGIA DA ALIMENTAÇÃO",
+      "subarea": "",
+      "totalGeral": 13,
+      "totalPcd": 2,
+      "totalPpp": 3
+    }
+  ],
+  "analista": [
+    {
+      "opcao": "40002042",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "ANÁLISE SENSORIAL",
+      "totalGeral": 135,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001064",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "CIÊNCIA DE ALIMENTOS",
+      "totalGeral": 1692,
+      "totalPcd": 7,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000281",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "CIÊNCIA DE ALIMENTOS DE ORGANISMOS AQUÁTICOS",
+      "totalGeral": 46,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000150",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "CIÊNCIA DE ALIMENTOS DE ORIGEM ANIMAL",
+      "totalGeral": 171,
+      "totalPcd": 2,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40009493",
+      "area": "CIÊNCIA E TECNOLOGIA DE ALIMENTOS",
+      "subarea": "TECNOLOGIA E INOVAÇÃO ALIMENTAR PARA GASTRONOMIA",
+      "totalGeral": 25,
+      "totalPcd": 0,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40002688",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "CIÊNCIA DO SOLO",
+      "totalGeral": 820,
+      "totalPcd": 8,
+      "totalPpp": 12
+    },
+    {
+      "opcao": "40000379",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "CLÍNICA E CIRURGIA DE CAPRINOS E OVINOS",
+      "totalGeral": 74,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40004353",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "CLÍNICA VETERINÁRIA",
+      "totalGeral": 332,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001465",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "RECURSOS GENÉTICOS MICROBIANOS",
+      "totalGeral": 53,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001355",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "RECURSOS PESQUEIROS E ENGENHARIA DE PESCA",
+      "totalGeral": 160,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000773",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SANIDADE E DEFESA ANIMAL",
+      "totalGeral": 297,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000724",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SANIDADE E DEFESA VEGETAL",
+      "totalGeral": 362,
+      "totalPcd": 2,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40001496",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SENSORIAMENTO REMOTO",
+      "totalGeral": 109,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000932",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMA DE PRODUÇÃO VEGETAL",
+      "totalGeral": 1519,
+      "totalPcd": 5,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40003735",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "SISTEMAS DE PRODUÇÃO ANIMAL",
+      "totalGeral": 708,
+      "totalPcd": 2,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40001042",
+      "area": "CIÊNCIAS AGRÁRIAS",
+      "subarea": "TECNOLOGIA DE SEMENTES",
+      "totalGeral": 250,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40002139",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA AVANÇADA E BIOINFORMÁTICA",
+      "totalGeral": 294,
+      "totalPcd": 7,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001224",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA AVANÇADA E QUÍMICA",
+      "totalGeral": 172,
+      "totalPcd": 0,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40002166",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA AVANÇADA E TECNOLOGIA DA INFORMAÇÃO",
+      "totalGeral": 9,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40003476",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA MOLECULAR E GENÉTICA ANIMAL",
+      "totalGeral": 552,
+      "totalPcd": 3,
+      "totalPpp": 10
+    },
+    {
+      "opcao": "40000605",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BIOLOGIA SINTÉTICA E CIÊNCIAS ÔMICAS",
+      "totalGeral": 112,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000042",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "BOTÂNICA E ECOLOGIA",
+      "totalGeral": 753,
+      "totalPcd": 4,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40001028",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "INSUMOS BIOLÓGICOS",
+      "totalGeral": 1280,
+      "totalPcd": 7,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000332",
+      "area": "CIÊNCIAS BIOLÓGICAS",
+      "subarea": "RECURSOS GENÉTICOS E MELHORAMENTO GENÉTICO VEGETAL",
+      "totalGeral": 322,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40001607",
+      "area": "CIÊNCIAS EXATAS E DA TERRA",
+      "subarea": "AGRICULTURA E CLIMATOLOGIA",
+      "totalGeral": 139,
+      "totalPcd": 1,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40002198",
+      "area": "CIÊNCIAS EXATAS E DA TERRA",
+      "subarea": "CIÊNCIA DE DADOS",
+      "totalGeral": 373,
+      "totalPcd": 6,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40001642",
+      "area": "CIÊNCIAS EXATAS E DA TERRA",
+      "subarea": "GEOMÁTICA",
+      "totalGeral": 208,
+      "totalPcd": 1,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40002345",
+      "area": "CIÊNCIAS EXATAS E DA TERRA",
+      "subarea": "SISTEMAS DE INFORMAÇÃO",
+      "totalGeral": 175,
+      "totalPcd": 2,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000176",
+      "area": "CIÊNCIAS SOCIAIS APLICADAS",
+      "subarea": "CIÊNCIAS SOCIAIS APLICADAS À AGROPECUÁRIA",
+      "totalGeral": 29,
+      "totalPcd": 2,
+      "totalPpp": 10
+    },
+    {
+      "opcao": "40002311",
+      "area": "DIREITO E AUDITORIA",
+      "subarea": "ASSESSORIA JURÍDICA",
+      "totalGeral": 22,
+      "totalPcd": 4,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40007169",
+      "area": "DIREITO E AUDITORIA",
+      "subarea": "AUDITORIA CONTÁBIL",
+      "totalGeral": 30,
+      "totalPcd": 1,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40002180",
+      "area": "ENGENHARIAS",
+      "subarea": "AUTOMAÇÃO E MECANIZAÇÃO",
+      "totalGeral": 156,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000642",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "AVALIAÇÃO DE IMPACTOS",
+      "totalGeral": 11,
+      "totalPcd": 0,
+      "totalPpp": 0
+    },
+    {
+      "opcao": "40002220",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "ENGENHARIA DE DADOS",
+      "totalGeral": 87,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40002278",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "ENGENHARIA DE INFRAESTRUTURA E TECNOLOGIA DA INFORMAÇÃO",
+      "totalGeral": 1026,
+      "totalPcd": 11,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40001066",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "ENGENHARIA DE SOFTWARE",
+      "totalGeral": 486,
+      "totalPcd": 4,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40002260",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "GESTÃO DA INFORMAÇÃO ARQUIVÍSTICA",
+      "totalGeral": 89,
+      "totalPcd": 2,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000909",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "GESTÃO DA INFORMAÇÃO BIBLIOGRÁFICA",
+      "totalGeral": 167,
+      "totalPcd": 4,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40000981",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "GESTÃO DA INFORMAÇÃO E DA PROGRAMAÇÃO",
+      "totalGeral": 27,
+      "totalPcd": 2,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40001150",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "GESTÃO DA INFORMAÇÃO EDIÇÃO",
+      "totalGeral": 28,
+      "totalPcd": 1,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40001098",
+      "area": "GESTÃO DE PESSOAS",
+      "subarea": "ADMINISTRAÇÃO DE PESSOAS",
+      "totalGeral": 779,
+      "totalPcd": 12,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40002319",
+      "area": "GESTÃO DE PESSOAS",
+      "subarea": "DESENVOLVIMENTO HUMANO",
+      "totalGeral": 1252,
+      "totalPcd": 8,
+      "totalPpp": 11
+    },
+    {
+      "opcao": "40002284",
+      "area": "GESTÃO DE PESSOAS",
+      "subarea": "FOLHA DE PAGAMENTO",
+      "totalGeral": 98,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000012",
+      "area": "GESTÃO DE PESSOAS",
+      "subarea": "SAÚDE OCUPACIONAL",
+      "totalGeral": 278,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40002289",
+      "area": "GESTÃO DE PESSOAS",
+      "subarea": "SEGURANÇA E SAÚDE DO TRABALHO",
+      "totalGeral": 230,
+      "totalPcd": 3,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40002490",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "ARTICULAÇÃO POLÍTICO- INSTITUCIONAL INTERNACIONAL",
+      "totalGeral": 20,
+      "totalPcd": 6,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40003250",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "ARTICULAÇÃO POLÍTICO- INSTITUCIONAL NACIONAL",
+      "totalGeral": 17,
+      "totalPcd": 4,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40001201",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "GESTÃO INTEGRADA DE QUALIDADE E SUSTENTABILIDADE",
+      "totalGeral": 295,
+      "totalPcd": 3,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000383",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "GOVERNANÇA E ESTRATÉGIA",
+      "totalGeral": 21,
+      "totalPcd": 3,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000616",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "GOVERNANÇA SUSTENTÁVEL",
+      "totalGeral": 294,
+      "totalPcd": 1,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40002367",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "INTELIGÊNCIA E PLANEJAMENTO ESTRATÉGICO",
+      "totalGeral": 28,
+      "totalPcd": 0,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000202",
+      "area": "GESTÃO ESTRATÉGICA",
+      "subarea": "RISCOS, CONFORMIDADE E TRANSPARÊNCIA",
+      "totalGeral": 22,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000210",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "APOIO A CAMPO EXPERIMENTAL",
+      "totalGeral": 450,
+      "totalPcd": 6,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000464",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "APOIO A CAMPO EXPERIMENTAL",
+      "totalGeral": 233,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000205",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "BIOFÍSICA AMBIENTAL",
+      "totalGeral": 20,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000013",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "CULTURA DE TECIDOS",
+      "totalGeral": 226,
+      "totalPcd": 0,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40000551",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "GESTÃO DA QUALIDADE LABORATORIAL",
+      "totalGeral": 506,
+      "totalPcd": 6,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40001181",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "LABORATÓRIO",
+      "totalGeral": 662,
+      "totalPcd": 7,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40001060",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "MICROBIOLOGIA DO SOLO",
+      "totalGeral": 21,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40000141",
+      "area": "LABORATÓRIOS E CAMPOS EXPERIMENTAIS",
+      "subarea": "QUÍMICA",
+      "totalGeral": 651,
+      "totalPcd": 5,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40000237",
+      "area": "MÉTODOS QUANTITATIVOS AVANÇADOS",
+      "subarea": "MÉTODOS QUANTITATIVOS",
+      "totalGeral": 35,
+      "totalPcd": 1,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40000353",
+      "area": "NANOTECNOLOGIA",
+      "subarea": "NANOTECNOLOGIA",
+      "totalGeral": 242,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40002223",
+      "area": "ORÇAMENTO E FINANÇAS",
+      "subarea": "CONTABILIDADE",
+      "totalGeral": 384,
+      "totalPcd": 7,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000408",
+      "area": "ORÇAMENTO E FINANÇAS",
+      "subarea": "ORÇAMENTO E FINANÇAS",
+      "totalGeral": 118,
+      "totalPcd": 0,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40002271",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "ADMINISTRATIVO, SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "totalGeral": 4097,
+      "totalPcd": 22,
+      "totalPpp": 26
+    },
+    {
+      "opcao": "40006388",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "ATIVOS PATRIMONIAIS E IMOBILIÁRIOS",
+      "totalGeral": 52,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40008640",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "INFRAESTRUTURA",
+      "totalGeral": 20,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40004441",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "INFRAESTRUTURA",
+      "totalGeral": 247,
+      "totalPcd": 4,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40004461",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "INFRAESTRUTURA",
+      "totalGeral": 339,
+      "totalPcd": 4,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40003340",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "INFRAESTRUTURA",
+      "totalGeral": 51,
+      "totalPcd": 0,
+      "totalPpp": 2
+    },
+    {
+      "opcao": "40001648",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "ANÁLISE DE DADOS",
+      "totalGeral": 128,
+      "totalPcd": 3,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000648",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "COMUNICAÇÃO",
+      "totalGeral": 20,
+      "totalPcd": 8,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000463",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "DESIGNER GRÁFICO",
+      "totalGeral": 878,
+      "totalPcd": 9,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40000497",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "GESTÃO DA PROPRIEDADE INTELECTUAL PARA A INOVAÇÃO",
+      "totalGeral": 24,
+      "totalPcd": 6,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40004569",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "GESTÃO DE INSTRUMENTOS DE PARCERIAS E NEGÓCIOS",
+      "totalGeral": 29,
+      "totalPcd": 1,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40001151",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "GESTÃO DE PARCERIAS, PORTFÓLIOS E NEGÓCIOS PARA A INOVAÇÃO",
+      "totalGeral": 81,
+      "totalPcd": 12,
+      "totalPpp": 16
+    },
+    {
+      "opcao": "40002144",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "GESTÃO DE PROJETOS",
+      "totalGeral": 63,
+      "totalPcd": 1,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40001348",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "INOVAÇÃO SOCIAL",
+      "totalGeral": 30,
+      "totalPcd": 6,
+      "totalPpp": 10
+    },
+    {
+      "opcao": "40000432",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "JORNALISMO",
+      "totalGeral": 22,
+      "totalPcd": 6,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40002027",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "TECNOLOGIA DE ALIMENTOS",
+      "totalGeral": 75,
+      "totalPcd": 0,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40002553",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "TRANSFERÊNCIA DE TECNOLOGIA",
+      "totalGeral": 241,
+      "totalPcd": 6,
+      "totalPpp": 6
+    }
+  ],
+  "tecnico": [
+    {
+      "opcao": "40000682",
+      "area": "GESTÃO DA INFORMAÇÃO",
+      "subarea": "TECNOLOGIA DA INFORMAÇÃO",
+      "totalGeral": 294,
+      "totalPcd": 3,
+      "totalPpp": 4
+    },
+    {
+      "opcao": "40001814",
+      "area": "GESTÃO DE PESSOAS",
+      "subarea": "SEGURANÇA E SAÚDE DO TRABALHO",
+      "totalGeral": 369,
+      "totalPcd": 5,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000262",
+      "area": "LABORATÓRIO E CAMPOS EXPERIMENTAIS",
+      "subarea": "BIOQUÍMICA E BIOLOGIA MOLECULAR",
+      "totalGeral": 130,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000188",
+      "area": "LABORATÓRIO E CAMPOS EXPERIMENTAIS",
+      "subarea": "LABORATÓRIO",
+      "totalGeral": 4355,
+      "totalPcd": 18,
+      "totalPpp": 29
+    },
+    {
+      "opcao": "40000002",
+      "area": "LABORATÓRIO E CAMPOS EXPERIMENTAIS",
+      "subarea": "MANEJO ANIMAL",
+      "totalGeral": 47,
+      "totalPcd": 3,
+      "totalPpp": 14
+    },
+    {
+      "opcao": "40001925",
+      "area": "LABORATÓRIO E CAMPOS EXPERIMENTAIS",
+      "subarea": "MANEJO FLORESTAL",
+      "totalGeral": 11,
+      "totalPcd": 0,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000084",
+      "area": "LABORATÓRIO E CAMPOS EXPERIMENTAIS",
+      "subarea": "MANEJO VEGETAL",
+      "totalGeral": 2995,
+      "totalPcd": 32,
+      "totalPpp": 43
+    },
+    {
+      "opcao": "40004381",
+      "area": "MECÂNICA",
+      "subarea": "MECÂNICA DE PRECISÃO",
+      "totalGeral": 12,
+      "totalPcd": 0,
+      "totalPpp": 1
+    },
+    {
+      "opcao": "40002449",
+      "area": "ORÇAMENTO E FINANÇAS",
+      "subarea": "CONTABILIDADE",
+      "totalGeral": 18,
+      "totalPcd": 1,
+      "totalPpp": 6
+    },
+    {
+      "opcao": "40000288",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "AQUICULTURA",
+      "totalGeral": 184,
+      "totalPcd": 0,
+      "totalPpp": 7
+    },
+    {
+      "opcao": "40001388",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "ATIVOS PATRIMONIAIS E IMOBILIÁRIOS",
+      "totalGeral": 556,
+      "totalPcd": 2,
+      "totalPpp": 5
+    },
+    {
+      "opcao": "40000878",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "MONITORAMENTO PREDITIVO",
+      "totalGeral": 260,
+      "totalPcd": 0,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40001393",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "NOVAS TECNOLOGIAS",
+      "totalGeral": 69,
+      "totalPcd": 1,
+      "totalPpp": 8
+    },
+    {
+      "opcao": "40000127",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "SUPORTE À GESTÃO",
+      "totalGeral": 6053,
+      "totalPcd": 9,
+      "totalPpp": 9
+    },
+    {
+      "opcao": "40002348",
+      "area": "TRANSFERÊNCIA DE TECNOLOGIA E COMUNICAÇÃO",
+      "subarea": "TÉCNICO AUDIOVISUAL",
+      "totalGeral": 96,
+      "totalPcd": 0,
+      "totalPpp": 3
+    }
+  ],
+  "assistente": [
+    {
+      "opcao": "40003995",
+      "area": "LABORATÓRIO E CAMPOS EXPERIENCIAIS",
+      "subarea": "LABORATÓRIO",
+      "totalGeral": 4141,
+      "totalPcd": 6,
+      "totalPpp": 3
+    },
+    {
+      "opcao": "40000007",
+      "area": "LABORATÓRIO E CAMPOS EXPERIENCIAIS",
+      "subarea": "MANEJO ANIMAL",
+      "totalGeral": 58,
+      "totalPcd": 8,
+      "totalPpp": 13
+    },
+    {
+      "opcao": "40000035",
+      "area": "SUPRIMENTO, MANUTENÇÃO E SERVIÇOS",
+      "subarea": "OPERADOR DE MÁQUINAS AGRÍCOLAS E VEÍCULOS",
+      "totalGeral": 65,
+      "totalPcd": 5,
+      "totalPpp": 20
+    }
+  ]
+}
