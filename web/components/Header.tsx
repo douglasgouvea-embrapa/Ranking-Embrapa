@@ -1,6 +1,6 @@
 export function Header({ convocadosCount, atualizadoEm }: { convocadosCount: number; atualizadoEm: string | null }) {
   const dataFormatada = atualizadoEm
-    ? new Date(atualizadoEm).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+    ? new Date(atualizadoEm).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short', timeZone: 'America/Sao_Paulo' })
     : '—';
 
   return (

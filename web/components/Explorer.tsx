@@ -163,7 +163,7 @@ export function Explorer({ groups }: Props) {
   }, [opcaoData, convocadosPorOpcao]);
 
   const dataFormatada = atualizadoEm
-    ? new Date(atualizadoEm).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
+    ? new Date(atualizadoEm).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short', timeZone: 'America/Sao_Paulo' })
     : '—';
 
   return (
