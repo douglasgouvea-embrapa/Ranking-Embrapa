@@ -31,7 +31,6 @@ export function Explorer({ groups }: Props) {
   const [filtroTipo, setFiltroTipo] = useState<'todos' | SlotType>('todos');
 
   const [convocadosMap, setConvocadosMap] = useState<Map<string, ConvocadoRecord>>(new Map());
-  const [convocadosByNome, setConvocadosByNome] = useState<Map<string, ConvocadoRecord>>(new Map());
   const [convocadosPorOpcao, setConvocadosPorOpcao] = useState<Map<string, ConvocadoRecord[]>>(new Map());
   const [convocadosLoading, setConvocadosLoading] = useState(true);
   const [convocadosTotal, setConvocadosTotal] = useState(0);
@@ -50,11 +49,9 @@ export function Explorer({ groups }: Props) {
       const res = await fetch(url, { cache: 'no-store' });
       const data = await res.json() as { convocados: ConvocadoRecord[]; total: number; atualizadoEm: string };
       const byKey = new Map<string, ConvocadoRecord>();
-      const byNome = new Map<string, ConvocadoRecord>();
       const byOpcao = new Map<string, ConvocadoRecord[]>();
       for (const c of data.convocados) {
         byKey.set(makeKey(c.opcao, c.nome), c);
-        byNome.set(normalizeName(c.nome), c);
         if (c.opcao) {
           const arr = byOpcao.get(c.opcao) ?? [];
           arr.push(c);
@@ -62,7 +59,6 @@ export function Explorer({ groups }: Props) {
         }
       }
       setConvocadosMap(byKey);
-      setConvocadosByNome(byNome);
       setConvocadosPorOpcao(byOpcao);
       setConvocadosTotal(data.total ?? 0);
       setAtualizadoEm(data.atualizadoEm ?? null);
@@ -106,12 +102,13 @@ export function Explorer({ groups }: Props) {
   }, [currentGroup.opcoes, searchOpcao]);
 
   const findConvocado = useCallback(
+    // Match estrito por opção + nome. Candidatos que fizeram o concurso para
+    // mais de uma opção (raro) só aparecem como convocados na opção em que o
+    // Looker registrar — não vaza de uma opção para outra via nome.
     (opcao: string, nome: string): ConvocadoRecord | undefined => {
-      const byKey = convocadosMap.get(makeKey(opcao, nome));
-      if (byKey) return byKey;
-      return convocadosByNome.get(normalizeName(nome));
+      return convocadosMap.get(makeKey(opcao, nome));
     },
-    [convocadosMap, convocadosByNome],
+    [convocadosMap],
   );
 
   const chamadasFiltradas = useMemo(() => {
