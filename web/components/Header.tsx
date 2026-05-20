@@ -18,7 +18,7 @@ export function Header({ convocadosCount, atualizadoEm }: { convocadosCount: num
       <div className="relative mx-auto max-w-7xl px-6 py-12 md:py-16">
         <div className="flex items-center gap-3 text-sm font-medium text-emerald-200">
           <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-emerald-300" />
-          Concurso Embrapa · Edital 2025
+          Concurso Embrapa · Edital 2024
         </div>
         <h1 className="mt-3 text-3xl font-bold tracking-tight md:text-5xl">
           Acompanhamento de Convocações

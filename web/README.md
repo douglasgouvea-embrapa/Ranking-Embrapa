@@ -1,7 +1,7 @@
 # Ranking Concurso Embrapa
 
 Interface web para consulta do ranking dos aprovados no concurso público da Embrapa
-(Edital 2025) cruzado com a lista de convocações em tempo real.
+(Edital 2024) cruzado com a lista de convocações em tempo real.
 
 ## Stack
 
