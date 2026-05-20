@@ -1,5 +1,8 @@
+import { unstable_cache } from 'next/cache';
 import lookerQuery from './looker-query.json';
 import type { ConvocadoRecord } from './types';
+
+export const CONVOCADOS_CACHE_TAG = 'convocados';
 
 const LOOKER_ENDPOINT = 'https://datastudio.google.com/batchedDataV2?appVersion=20260508_0101';
 const REPORT_URL = 'https://datastudio.google.com/reporting/081070ee-89c7-4e57-85bc-04d4601aa513/page/qD6ZF';
@@ -94,3 +97,15 @@ export async function fetchConvocadosFromLooker(): Promise<{
 
   return { convocados, total, fetchedAt: new Date().toISOString() };
 }
+
+/**
+ * Versão cacheada da consulta ao Looker — usar em todos os pontos do app
+ * (route handlers, server components etc.) para compartilhar o mesmo cache.
+ *
+ * Tag `convocados` permite invalidação manual via revalidateTag().
+ */
+export const getCachedConvocados = unstable_cache(
+  async () => fetchConvocadosFromLooker(),
+  ['convocados-looker'],
+  { revalidate: 86400, tags: [CONVOCADOS_CACHE_TAG] },
+);

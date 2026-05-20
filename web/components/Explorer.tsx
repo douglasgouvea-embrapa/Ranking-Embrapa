@@ -152,8 +152,8 @@ export function Explorer({ groups }: Props) {
     const lista = convocadosPorOpcao.get(opcaoData.opcao) ?? [];
     const counts = { ac: 0, ppp: 0, pcd: 0 };
     for (const c of lista) {
-      // Desistentes e Desclassificados liberam a vaga — não ocupam posição.
-      if (c.status === 'Desistente' || c.status === 'Desclassificado') continue;
+      // Desistentes, Desclassificados e "Não se manifestou" liberam a vaga — não ocupam posição.
+      if (c.status === 'Desistente' || c.status === 'Desclassificado' || c.status === 'Não se manifestou') continue;
       const coloc = c.colocacao?.toUpperCase() ?? '';
       if (coloc.includes('PPP')) counts.ppp++;
       else if (coloc.includes('PCD')) counts.pcd++;

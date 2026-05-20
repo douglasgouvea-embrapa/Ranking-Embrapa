@@ -3,16 +3,15 @@ import { Explorer } from '@/components/Explorer';
 import type { OpcaoSummary } from '@/components/Explorer';
 import { Footer } from '@/components/Footer';
 import { CARGO_GROUPS, getOpcoesByGroup } from '@/lib/data';
+import { getCachedConvocados } from '@/lib/looker';
+
+// Revalida a página a cada 1 hora — header reflete a contagem real do Looker.
+export const revalidate = 3600;
 
 async function fetchConvocadosMeta() {
   try {
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : `http://localhost:${process.env.PORT || 3000}`;
-    const res = await fetch(`${baseUrl}/api/convocados`, { next: { revalidate: 60 } });
-    if (!res.ok) return { total: 0, atualizadoEm: null as string | null };
-    const data = await res.json();
-    return { total: data.total ?? 0, atualizadoEm: data.atualizadoEm ?? null };
+    const data = await getCachedConvocados();
+    return { total: data.total, atualizadoEm: data.fetchedAt };
   } catch {
     return { total: 0, atualizadoEm: null as string | null };
   }

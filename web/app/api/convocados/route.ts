@@ -1,22 +1,13 @@
 import { NextResponse } from 'next/server';
-import { unstable_cache, revalidateTag } from 'next/cache';
-import { fetchConvocadosFromLooker } from '@/lib/looker';
-
-const CACHE_TAG = 'convocados';
-const ONE_DAY = 86400;
-
-const cachedFetch = unstable_cache(
-  async () => fetchConvocadosFromLooker(),
-  ['convocados-looker'],
-  { revalidate: ONE_DAY, tags: [CACHE_TAG] },
-);
+import { revalidateTag } from 'next/cache';
+import { getCachedConvocados, CONVOCADOS_CACHE_TAG } from '@/lib/looker';
 
 export async function GET(req: Request) {
   const force = new URL(req.url).searchParams.get('force') === '1';
 
   try {
-    if (force) revalidateTag(CACHE_TAG);
-    const data = await cachedFetch();
+    if (force) revalidateTag(CONVOCADOS_CACHE_TAG);
+    const data = await getCachedConvocados();
     return NextResponse.json({
       convocados: data.convocados,
       total: data.total,
@@ -33,9 +24,9 @@ export async function GET(req: Request) {
 }
 
 export async function POST() {
-  revalidateTag(CACHE_TAG);
+  revalidateTag(CONVOCADOS_CACHE_TAG);
   try {
-    const data = await cachedFetch();
+    const data = await getCachedConvocados();
     return NextResponse.json({
       ok: true,
       total: data.total,
