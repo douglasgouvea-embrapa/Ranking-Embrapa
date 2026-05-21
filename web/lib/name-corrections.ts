@@ -23,4 +23,9 @@ export const LOOKER_NAME_CORRECTIONS: Array<{
     nomeErrado: 'ANA ALICE ANDRADE OLIVIERA',
     nomeCerto: 'Ana Alice Andrade Oliveira',
   },
+  {
+    opcao: '40000127',
+    nomeErrado: 'RAQUEL EDUARDA CANDIDA DA SILVA NASCIMENTO',
+    nomeCerto: 'Raquel Eduarda Candida da Silva do Nascimento',
+  },
 ];
