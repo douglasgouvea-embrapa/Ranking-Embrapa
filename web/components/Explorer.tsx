@@ -3,7 +3,10 @@
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { normalizeName } from '@/lib/normalize';
 import type { OpcaoComChamadas, ConvocadoRecord, SlotType } from '@/lib/types';
+import type { Novidade } from '@/lib/snapshot';
+import type { ProximoConvocado } from '@/lib/dashboard';
 import { VagasChart } from './VagasChart';
+import { DashboardHome } from './DashboardHome';
 
 export type OpcaoSummary = {
   opcao: string;
@@ -37,6 +40,10 @@ export function Explorer({ groups }: Props) {
   const [atualizadoEm, setAtualizadoEm] = useState<string | null>(null);
   const [syncing, setSyncing] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [novidades, setNovidades] = useState<Novidade[]>([]);
+  const [snapshotAnterior, setSnapshotAnterior] = useState<{ fetchedAt: string; total: number } | null>(null);
+  const [proximos, setProximos] = useState<ProximoConvocado[]>([]);
+  const [kvAtivo, setKvAtivo] = useState(true);
 
   const [opcaoData, setOpcaoData] = useState<OpcaoComChamadas | null>(null);
   const [opcaoLoading, setOpcaoLoading] = useState(false);
@@ -47,7 +54,15 @@ export function Explorer({ groups }: Props) {
     try {
       const url = force ? '/api/convocados?force=1' : '/api/convocados';
       const res = await fetch(url, { cache: 'no-store' });
-      const data = await res.json() as { convocados: ConvocadoRecord[]; total: number; atualizadoEm: string };
+      const data = await res.json() as {
+        convocados: ConvocadoRecord[];
+        total: number;
+        atualizadoEm: string;
+        novidades?: Novidade[];
+        snapshotAnterior?: { fetchedAt: string; total: number } | null;
+        proximos?: ProximoConvocado[];
+        kvAtivo?: boolean;
+      };
       const byKey = new Map<string, ConvocadoRecord>();
       const byOpcao = new Map<string, ConvocadoRecord[]>();
       for (const c of data.convocados) {
@@ -62,6 +77,10 @@ export function Explorer({ groups }: Props) {
       setConvocadosPorOpcao(byOpcao);
       setConvocadosTotal(data.total ?? 0);
       setAtualizadoEm(data.atualizadoEm ?? null);
+      setNovidades(data.novidades ?? []);
+      setSnapshotAnterior(data.snapshotAnterior ?? null);
+      setProximos(data.proximos ?? []);
+      setKvAtivo(data.kvAtivo ?? false);
     } catch {
       setSyncError('Não foi possível sincronizar com o Looker.');
     } finally {
@@ -265,7 +284,18 @@ export function Explorer({ groups }: Props) {
         {/* Ranking detail */}
         <main className="rounded-2xl bg-white p-6 shadow-soft ring-1 ring-black/5">
           {!opcaoId ? (
-            <EmptyState />
+            <DashboardHome
+              novidades={novidades}
+              snapshotAnterior={snapshotAnterior}
+              proximos={proximos}
+              kvAtivo={kvAtivo}
+              atualizadoEm={atualizadoEm}
+              total={convocadosTotal}
+              onSelectOpcao={(grp, op) => {
+                setGroupId(grp);
+                setOpcaoId(op);
+              }}
+            />
           ) : opcaoLoading ? (
             <LoadingState />
           ) : !opcaoData ? (
@@ -490,22 +520,6 @@ function StatusBadge({ conv, loading }: { conv: ConvocadoRecord | undefined; loa
     default:
       return <span className="pill bg-gray-100 text-gray-700">{conv.status ?? 'Convocado'}</span>;
   }
-}
-
-function EmptyState() {
-  return (
-    <div className="flex flex-col items-center justify-center py-20 text-center">
-      <div className="rounded-full bg-embrapa-blue-light p-4">
-        <svg viewBox="0 0 24 24" className="h-10 w-10 text-embrapa-blue" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 4.5h18M3 12h18M3 19.5h12" />
-        </svg>
-      </div>
-      <h3 className="mt-4 text-lg font-semibold text-embrapa-ink">Selecione uma área</h3>
-      <p className="mt-1 max-w-md text-sm text-gray-500">
-        Escolha uma área ou subárea no painel à esquerda para ver a ordem de convocação dos aprovados, com o status atualizado de cada candidato.
-      </p>
-    </div>
-  );
 }
 
 function LoadingState() {
