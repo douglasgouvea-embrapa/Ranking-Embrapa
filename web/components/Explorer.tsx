@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState, useCallback } from 'react';
 import { normalizeName } from '@/lib/normalize';
+import { matchChamadasComConvocados } from '@/lib/match';
 import type { OpcaoComChamadas, ConvocadoRecord, SlotType } from '@/lib/types';
 import type { Novidade } from '@/lib/snapshot';
 import type { ProximoConvocado } from '@/lib/dashboard';
@@ -22,10 +23,6 @@ type Props = {
   groups: { id: string; label: string; opcoes: OpcaoSummary[] }[];
 };
 
-function makeKey(opcao: string | undefined, nome: string) {
-  return `${opcao ?? ''}|${normalizeName(nome)}`;
-}
-
 export function Explorer({ groups }: Props) {
   const [groupId, setGroupId] = useState(groups[0]?.id ?? '');
   const [opcaoId, setOpcaoId] = useState<string>('');
@@ -33,7 +30,6 @@ export function Explorer({ groups }: Props) {
   const [searchNome, setSearchNome] = useState('');
   const [filtroTipo, setFiltroTipo] = useState<'todos' | SlotType>('todos');
 
-  const [convocadosMap, setConvocadosMap] = useState<Map<string, ConvocadoRecord>>(new Map());
   const [convocadosPorOpcao, setConvocadosPorOpcao] = useState<Map<string, ConvocadoRecord[]>>(new Map());
   const [convocadosLoading, setConvocadosLoading] = useState(true);
   const [convocadosTotal, setConvocadosTotal] = useState(0);
@@ -63,17 +59,14 @@ export function Explorer({ groups }: Props) {
         proximos?: ProximoConvocado[];
         kvAtivo?: boolean;
       };
-      const byKey = new Map<string, ConvocadoRecord>();
       const byOpcao = new Map<string, ConvocadoRecord[]>();
       for (const c of data.convocados) {
-        byKey.set(makeKey(c.opcao, c.nome), c);
         if (c.opcao) {
           const arr = byOpcao.get(c.opcao) ?? [];
           arr.push(c);
           byOpcao.set(c.opcao, arr);
         }
       }
-      setConvocadosMap(byKey);
       setConvocadosPorOpcao(byOpcao);
       setConvocadosTotal(data.total ?? 0);
       setAtualizadoEm(data.atualizadoEm ?? null);
@@ -120,14 +113,17 @@ export function Explorer({ groups }: Props) {
     );
   }, [currentGroup.opcoes, searchOpcao]);
 
+  // Resolve, para a opção atual, qual convocado corresponde a cada chamada.
+  // Match em 2 passadas (exato + fuzzy por posição+nome) — ver lib/match.ts.
+  const matchPorInscricao = useMemo(() => {
+    if (!opcaoData) return new Map<string, ConvocadoRecord>();
+    const convs = convocadosPorOpcao.get(opcaoData.opcao) ?? [];
+    return matchChamadasComConvocados(opcaoData.chamadas, convs);
+  }, [opcaoData, convocadosPorOpcao]);
+
   const findConvocado = useCallback(
-    // Match estrito por opção + nome. Candidatos que fizeram o concurso para
-    // mais de uma opção (raro) só aparecem como convocados na opção em que o
-    // Looker registrar — não vaza de uma opção para outra via nome.
-    (opcao: string, nome: string): ConvocadoRecord | undefined => {
-      return convocadosMap.get(makeKey(opcao, nome));
-    },
-    [convocadosMap],
+    (inscricao: string): ConvocadoRecord | undefined => matchPorInscricao.get(inscricao),
+    [matchPorInscricao],
   );
 
   const chamadasFiltradas = useMemo(() => {
@@ -146,7 +142,7 @@ export function Explorer({ groups }: Props) {
     if (!opcaoData) return { contratados: 0, aceitos: 0, desistentes: 0, aguardando: 0 };
     let contratados = 0, aceitos = 0, desistentes = 0, aguardando = 0;
     for (const ch of opcaoData.chamadas) {
-      const conv = findConvocado(opcaoData.opcao, ch.candidato.nome);
+      const conv = findConvocado(ch.candidato.inscricao);
       if (!conv) aguardando++;
       else if (conv.status === 'Contratado') contratados++;
       else if (conv.status === 'Aceitou') aceitos++;
@@ -403,7 +399,7 @@ export function Explorer({ groups }: Props) {
                     </thead>
                     <tbody className="divide-y divide-gray-100">
                       {chamadasFiltradas.map(ch => {
-                        const conv = findConvocado(opcaoData.opcao, ch.candidato.nome);
+                        const conv = findConvocado(ch.candidato.inscricao);
                         return (
                           <tr key={ch.posicao} className="transition hover:bg-embrapa-blue-light/40">
                             <td className="px-3 py-3 font-mono font-semibold text-embrapa-blue">{ch.posicao}º</td>

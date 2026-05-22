@@ -1,6 +1,6 @@
 import { CARGO_GROUPS, getOpcoesByGroup } from './data';
 import { gerarChamadas } from './chamadas';
-import { normalizeName } from './normalize';
+import { matchChamadasComConvocados } from './match';
 import type { ConvocadoRecord, SlotType } from './types';
 
 export type ProximoConvocado = {
@@ -47,13 +47,13 @@ export function computeProximosConvocados(convocados: ConvocadoRecord[]): Proxim
       const convsOpcao = byOpcao.get(opcao.opcao);
       if (!convsOpcao || convsOpcao.length === 0) continue;
 
-      const calledNames = new Set(convsOpcao.map(c => normalizeName(c.nome)));
       const chamadas = gerarChamadas(opcao);
+      const matched = matchChamadasComConvocados(chamadas, convsOpcao);
 
       let ultimaPosicaoChamada = 0;
       let proximo: typeof chamadas[number] | undefined;
       for (const ch of chamadas) {
-        if (calledNames.has(normalizeName(ch.candidato.nome))) {
+        if (matched.has(ch.candidato.inscricao)) {
           ultimaPosicaoChamada = ch.posicao;
         } else if (!proximo) {
           proximo = ch;
