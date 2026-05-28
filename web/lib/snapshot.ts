@@ -3,20 +3,16 @@ import { normalizeName } from './normalize';
 import type { ConvocadoRecord } from './types';
 
 /**
- * Snapshot do estado dos convocados — usado para detectar novidades entre
- * sincronizações com o Looker.
- *
- * Estratégia: cada sincronização nova compara seus dados com o snapshot
- * salvo anteriormente, calcula a lista de novidades, e salva tudo junto
- * (entries + novidades). Assim novidades reflete sempre "o que mudou na
- * última sincronização", e múltiplas leituras dentro do mesmo ciclo de
- * cache não recomputam nem sobrescrevem nada.
+ * Snapshot do estado dos convocados — mantém o estado da última sincronização
+ * (para diff) e um histórico paginável das novidades de todas as syncs
+ * anteriores (cap em HISTORICO_CAP, mais novas primeiro).
  *
  * Persiste no Vercel KV (Upstash Redis). Se as env vars não estiverem
- * configuradas, vira no-op: novidades sempre [] e o app segue funcionando.
+ * configuradas, vira no-op: histórico sempre [] e o app segue funcionando.
  */
 
-const SNAPSHOT_KEY = 'ranking:convocados:snapshot:v2';
+const SNAPSHOT_KEY = 'ranking:convocados:snapshot:v3';
+const HISTORICO_CAP = 100;
 
 export type SnapshotEntry = {
   key: string;     // "opcao|normalized_nome"
@@ -26,7 +22,11 @@ export type SnapshotEntry = {
   colocacao?: string;
 };
 
-export type Novidade =
+export type HistoricoEntry =
+  | { id: string; detectedAt: string; tipo: 'novo'; nome: string; opcao?: string; status?: string; colocacao?: string }
+  | { id: string; detectedAt: string; tipo: 'status'; nome: string; opcao?: string; statusAnterior?: string; statusAtual?: string; colocacao?: string };
+
+type Diff =
   | { tipo: 'novo'; nome: string; opcao?: string; status?: string; colocacao?: string }
   | { tipo: 'status'; nome: string; opcao?: string; statusAnterior?: string; statusAtual?: string; colocacao?: string };
 
@@ -34,8 +34,7 @@ export type StoredSnapshot = {
   entries: SnapshotEntry[];
   total: number;
   fetchedAt: string;
-  novidades: Novidade[];
-  previousFetchedAt: string | null;
+  historico: HistoricoEntry[];
 };
 
 function getRedis(): Redis | null {
@@ -59,9 +58,9 @@ function toEntries(convocados: ConvocadoRecord[]): SnapshotEntry[] {
   }));
 }
 
-function diffEntries(current: SnapshotEntry[], previous: SnapshotEntry[]): Novidade[] {
+function diffEntries(current: SnapshotEntry[], previous: SnapshotEntry[]): Diff[] {
   const previousMap = new Map(previous.map(e => [e.key, e]));
-  const novidades: Novidade[] = [];
+  const novidades: Diff[] = [];
   for (const cur of current) {
     const prev = previousMap.get(cur.key);
     if (!prev) {
@@ -90,7 +89,14 @@ async function readStoredSnapshot(): Promise<StoredSnapshot | null> {
   const redis = getRedis();
   if (!redis) return null;
   try {
-    return (await redis.get<StoredSnapshot>(SNAPSHOT_KEY)) ?? null;
+    const stored = await redis.get<Partial<StoredSnapshot>>(SNAPSHOT_KEY);
+    if (!stored) return null;
+    return {
+      entries: stored.entries ?? [],
+      total: stored.total ?? 0,
+      fetchedAt: stored.fetchedAt ?? '',
+      historico: stored.historico ?? [],
+    };
   } catch (err) {
     console.error('[snapshot] erro lendo KV:', err);
     return null;
@@ -108,19 +114,17 @@ async function writeStoredSnapshot(snapshot: StoredSnapshot): Promise<void> {
 }
 
 export type DiffOutput = {
-  novidades: Novidade[];
-  snapshotAnterior: { fetchedAt: string; total: number } | null;
+  historico: HistoricoEntry[];
 };
 
 /**
  * Reconcilia o snapshot persistido com os dados atuais do Looker.
  *
- * - Se nunca houve snapshot (primeira execução com KV ligado): salva o atual
- *   sem novidades.
- * - Se o fetchedAt atual é mais novo que o do snapshot: é uma sincronização
- *   nova → calcula novidades vs snapshot salvo, persiste tudo.
- * - Caso contrário (mesma sincronização que gerou o snapshot): apenas retorna
- *   as novidades já persistidas.
+ * - Primeira execução com KV ligado: salva o atual sem adicionar ao histórico.
+ * - Sincronização nova (fetchedAt mudou): calcula diff vs snapshot salvo,
+ *   anexa cada novidade ao histórico (com detectedAt = fetchedAt), persiste.
+ * - Mesma sincronização (fetchedAt igual): retorna o histórico salvo sem
+ *   recomputar nem reescrever.
  */
 export async function reconcileSnapshot(
   convocados: ConvocadoRecord[],
@@ -130,32 +134,28 @@ export async function reconcileSnapshot(
   const stored = await readStoredSnapshot();
   const currentEntries = toEntries(convocados);
 
-  // Mesma sincronização que já gerou o snapshot atual → reusa novidades.
   if (stored && stored.fetchedAt === fetchedAt) {
-    return {
-      novidades: stored.novidades,
-      snapshotAnterior: stored.previousFetchedAt
-        ? { fetchedAt: stored.previousFetchedAt, total: stored.entries.length }
-        : null,
-    };
+    return { historico: stored.historico };
   }
 
-  // Sincronização nova (ou primeiríssima): calcula diff vs snapshot salvo,
-  // persiste o novo. Se não havia snapshot anterior, novidades = [].
   const novidades = stored ? diffEntries(currentEntries, stored.entries) : [];
+  const novasEntradas: HistoricoEntry[] = novidades.map((n, i) => ({
+    ...n,
+    id: `${fetchedAt}-${i}`,
+    detectedAt: fetchedAt,
+  }));
+
+  const historicoAtualizado = [...novasEntradas, ...(stored?.historico ?? [])].slice(0, HISTORICO_CAP);
+
   const novoSnapshot: StoredSnapshot = {
     entries: currentEntries,
     total,
     fetchedAt,
-    novidades,
-    previousFetchedAt: stored?.fetchedAt ?? null,
+    historico: historicoAtualizado,
   };
   await writeStoredSnapshot(novoSnapshot);
 
-  return {
-    novidades,
-    snapshotAnterior: stored ? { fetchedAt: stored.fetchedAt, total: stored.total } : null,
-  };
+  return { historico: historicoAtualizado };
 }
 
 export function isKvConfigured(): boolean {
