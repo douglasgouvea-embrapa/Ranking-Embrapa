@@ -4,8 +4,7 @@ import { useEffect, useMemo, useState, useCallback } from 'react';
 import { normalizeName } from '@/lib/normalize';
 import { matchChamadasComConvocados } from '@/lib/match';
 import type { OpcaoComChamadas, ConvocadoRecord, SlotType } from '@/lib/types';
-import type { Novidade } from '@/lib/snapshot';
-import type { ProximoConvocado } from '@/lib/dashboard';
+import type { HistoricoEntry } from '@/lib/snapshot';
 import { VagasChart } from './VagasChart';
 import { DashboardHome } from './DashboardHome';
 
@@ -36,9 +35,7 @@ export function Explorer({ groups }: Props) {
   const [atualizadoEm, setAtualizadoEm] = useState<string | null>(null);
   const [syncing, setSyncing] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
-  const [novidades, setNovidades] = useState<Novidade[]>([]);
-  const [snapshotAnterior, setSnapshotAnterior] = useState<{ fetchedAt: string; total: number } | null>(null);
-  const [proximos, setProximos] = useState<ProximoConvocado[]>([]);
+  const [historico, setHistorico] = useState<HistoricoEntry[]>([]);
   const [kvAtivo, setKvAtivo] = useState(true);
 
   const [opcaoData, setOpcaoData] = useState<OpcaoComChamadas | null>(null);
@@ -54,9 +51,7 @@ export function Explorer({ groups }: Props) {
         convocados: ConvocadoRecord[];
         total: number;
         atualizadoEm: string;
-        novidades?: Novidade[];
-        snapshotAnterior?: { fetchedAt: string; total: number } | null;
-        proximos?: ProximoConvocado[];
+        historico?: HistoricoEntry[];
         kvAtivo?: boolean;
       };
       const byOpcao = new Map<string, ConvocadoRecord[]>();
@@ -70,9 +65,7 @@ export function Explorer({ groups }: Props) {
       setConvocadosPorOpcao(byOpcao);
       setConvocadosTotal(data.total ?? 0);
       setAtualizadoEm(data.atualizadoEm ?? null);
-      setNovidades(data.novidades ?? []);
-      setSnapshotAnterior(data.snapshotAnterior ?? null);
-      setProximos(data.proximos ?? []);
+      setHistorico(data.historico ?? []);
       setKvAtivo(data.kvAtivo ?? false);
     } catch {
       setSyncError('Não foi possível sincronizar com o Looker.');
@@ -281,16 +274,9 @@ export function Explorer({ groups }: Props) {
         <main className="rounded-2xl bg-white p-6 shadow-soft ring-1 ring-black/5">
           {!opcaoId ? (
             <DashboardHome
-              novidades={novidades}
-              snapshotAnterior={snapshotAnterior}
-              proximos={proximos}
+              historico={historico}
               kvAtivo={kvAtivo}
               atualizadoEm={atualizadoEm}
-              total={convocadosTotal}
-              onSelectOpcao={(grp, op) => {
-                setGroupId(grp);
-                setOpcaoId(op);
-              }}
             />
           ) : opcaoLoading ? (
             <LoadingState />
