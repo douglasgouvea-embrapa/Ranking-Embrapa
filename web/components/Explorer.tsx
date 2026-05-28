@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, useCallback } from 'react';
 import { normalizeName } from '@/lib/normalize';
 import { matchChamadasComConvocados } from '@/lib/match';
 import type { OpcaoComChamadas, ConvocadoRecord, SlotType } from '@/lib/types';
-import type { HistoricoEntry } from '@/lib/snapshot';
+import type { HistoricoEntry } from '@/lib/historico';
 import { VagasChart } from './VagasChart';
 import { DashboardHome } from './DashboardHome';
 
@@ -36,7 +36,6 @@ export function Explorer({ groups }: Props) {
   const [syncing, setSyncing] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
   const [historico, setHistorico] = useState<HistoricoEntry[]>([]);
-  const [kvAtivo, setKvAtivo] = useState(true);
 
   const [opcaoData, setOpcaoData] = useState<OpcaoComChamadas | null>(null);
   const [opcaoLoading, setOpcaoLoading] = useState(false);
@@ -52,7 +51,6 @@ export function Explorer({ groups }: Props) {
         total: number;
         atualizadoEm: string;
         historico?: HistoricoEntry[];
-        kvAtivo?: boolean;
       };
       const byOpcao = new Map<string, ConvocadoRecord[]>();
       for (const c of data.convocados) {
@@ -66,7 +64,6 @@ export function Explorer({ groups }: Props) {
       setConvocadosTotal(data.total ?? 0);
       setAtualizadoEm(data.atualizadoEm ?? null);
       setHistorico(data.historico ?? []);
-      setKvAtivo(data.kvAtivo ?? false);
     } catch {
       setSyncError('Não foi possível sincronizar com o Looker.');
     } finally {
@@ -275,7 +272,6 @@ export function Explorer({ groups }: Props) {
           {!opcaoId ? (
             <DashboardHome
               historico={historico}
-              kvAtivo={kvAtivo}
               atualizadoEm={atualizadoEm}
             />
           ) : opcaoLoading ? (
