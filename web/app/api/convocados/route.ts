@@ -1,24 +1,31 @@
 import { NextResponse } from 'next/server';
 import { revalidateTag } from 'next/cache';
 import { getCachedConvocados, CONVOCADOS_CACHE_TAG } from '@/lib/looker';
-import { reconcileSnapshot, isKvConfigured } from '@/lib/snapshot';
+import { getCachedHistorico, HISTORICO_CACHE_TAG, type HistoricoEntry } from '@/lib/historico';
 
 export async function GET(req: Request) {
   const force = new URL(req.url).searchParams.get('force') === '1';
 
   try {
-    if (force) revalidateTag(CONVOCADOS_CACHE_TAG);
+    if (force) {
+      revalidateTag(CONVOCADOS_CACHE_TAG);
+      revalidateTag(HISTORICO_CACHE_TAG);
+    }
     const data = await getCachedConvocados();
 
-    const diff = await reconcileSnapshot(data.convocados, data.total, data.fetchedAt);
+    let historico: HistoricoEntry[] = [];
+    try {
+      historico = await getCachedHistorico();
+    } catch (err) {
+      console.error('Erro ao buscar histórico externo:', err);
+    }
 
     return NextResponse.json({
       convocados: data.convocados,
       total: data.total,
       atualizadoEm: data.fetchedAt,
       fonte: 'looker',
-      historico: diff.historico,
-      kvAtivo: isKvConfigured(),
+      historico,
     });
   } catch (err) {
     console.error('Erro ao buscar convocados:', err);
@@ -30,7 +37,6 @@ export async function GET(req: Request) {
         fonte: 'erro',
         erro: String(err),
         historico: [],
-        kvAtivo: isKvConfigured(),
       },
       { status: 502 },
     );
@@ -39,6 +45,7 @@ export async function GET(req: Request) {
 
 export async function POST() {
   revalidateTag(CONVOCADOS_CACHE_TAG);
+  revalidateTag(HISTORICO_CACHE_TAG);
   try {
     const data = await getCachedConvocados();
     return NextResponse.json({
